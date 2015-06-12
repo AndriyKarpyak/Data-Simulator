@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="data-sim-admin" default="build" basedir=".">
+
+	<target name="build" depends="resolve-libs">
+	</target>
+
+	<target name="resolve-libs" description="Load required libraries.">
+		<exec dir="." executable="cmd" failonerror="true">
+			<arg line="/c mvn process-sources" />
+		</exec>
+	</target>
+
+</project>

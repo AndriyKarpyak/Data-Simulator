@@ -1,1 +1,8 @@
 /bin/
+
+
+# Compiled Files
+*.class
+
+# Package Files and packaging logs
+*.jar

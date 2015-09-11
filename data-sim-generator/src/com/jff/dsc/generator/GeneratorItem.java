@@ -21,7 +21,6 @@ public abstract class GeneratorItem {
 
 	protected void generate() {
 		double evaluate = exp.evaluate();
-		System.out.println(id + "= " + evaluate);
 
 		if (!subscribers.isEmpty()) {
 			for (GeneratorItem sbsr : subscribers) {

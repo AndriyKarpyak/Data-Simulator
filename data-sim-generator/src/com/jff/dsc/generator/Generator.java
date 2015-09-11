@@ -5,12 +5,12 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 public class Generator {
-	
+
 	Logger LOG = Logger.getLogger(Generator.class.getName());
 
 	private Map<String, GeneratorItem> independentNodes = new HashMap<String, GeneratorItem>();
 	private Map<String, GeneratorItem> dependentNodes = new HashMap<String, GeneratorItem>();
-	
+
 	public void addNode(String id, String formula, String[] variables) {
 		LOG.entering(Generator.class.getName(), "addNode", "(id:" + id + ", formula:" + formula + ", variables:" + variables + ")");
 		if (variables == null) {
@@ -26,13 +26,16 @@ public class Generator {
 			}
 			dependentNodes.put(id, node);
 		}
+		LOG.exiting(Generator.class.getName(), "addNode");
 	}
-	
+
 	public void generate(int lenght) {
+		LOG.entering(Generator.class.getName(), "generate", "[lenght: " + lenght + "]");
 		for (int i = 0; i < lenght; i++) {
-		for (GeneratorItem node : independentNodes.values()) {
-			node.notify("step", i);
+			for (GeneratorItem node : independentNodes.values()) {
+				node.notify("step", i);
+			}
 		}
-		}
+		LOG.exiting(Generator.class.getName(), "generate");
 	}
 }

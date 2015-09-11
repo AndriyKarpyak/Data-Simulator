@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jff.dsc</groupId>
-	<artifactId>data-sim</artifactId>
+	<artifactId>data-sim-generator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="data-sim-admin" default="build" basedir=".">
+<project name="data-sim-generator" default="build" basedir=".">
 
 	<target name="build" depends="resolve-libs">
 	</target>
